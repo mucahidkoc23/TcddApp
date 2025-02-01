@@ -1,2 +1,7 @@
 @import "tailwindcss";
 
+@layer base {
+  * {
+    font-family: "Red Hat Display", sans-serif;
+  }
+}

@@ -6,7 +6,8 @@ import {
   FoodDetailDefinationLarge,
 } from '../components/FoodDetailDefination';
 import { UserInfo } from '../components/UserInfo';
-import { UnorderedListOutlined } from '@ant-design/icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUtensils } from "@fortawesome/free-solid-svg-icons";
 
 interface Recipe {
   name: string;
@@ -36,7 +37,7 @@ const FoodDetail = () => {
         <div className="mt-[175px]">
           <div className="absolute top-30 flex flex-row gap-2 text-xl font-bold text-orange-400">
             <div>
-              <UnorderedListOutlined />
+            <FontAwesomeIcon icon={faUtensils}/>
             </div>
             Yemek Detayı
           </div>

@@ -6,7 +6,6 @@ import { SearchBar } from '../components/SearchBar';
 import { SlideBar } from '../components/SlideBar';
 import { UnorderedListOutlined} from '@ant-design/icons';
 
-
 const HomePage: React.FC = () => {
   const [totalResults, setTotalResults] = useState<number>(0);
   const [currentPage, setCurrentPage] = useState<number>(1);
