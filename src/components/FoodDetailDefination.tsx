@@ -1,6 +1,7 @@
 import React from 'react';
 import { ExclamationOutlined } from '@ant-design/icons';
 
+
 interface FoodDetailDefinationProps {
   title: string;
   defination: string;

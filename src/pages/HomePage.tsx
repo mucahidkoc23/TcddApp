@@ -4,6 +4,8 @@ import { FoodList } from '../components/FoodList';
 import { UserInfo } from '../components/UserInfo';
 import { SearchBar } from '../components/SearchBar';
 import { SlideBar } from '../components/SlideBar';
+import { UnorderedListOutlined} from '@ant-design/icons';
+
 
 const HomePage: React.FC = () => {
   const [totalResults, setTotalResults] = useState<number>(0);
@@ -26,7 +28,8 @@ const HomePage: React.FC = () => {
           </div>
           <UserInfo />
           <SearchBar onSearch={handleSearch} />
-          <div className="absolute top-34 left-4 text-xl font-bold text-orange-400">
+          <div className="absolute flex flex-row gap-2 top-34 left-4 text-xl font-bold text-orange-400">
+            <div><UnorderedListOutlined/></div>
             Yemek Listesi
           </div>
         </div>

@@ -6,6 +6,7 @@ import {
   FoodDetailDefinationLarge,
 } from '../components/FoodDetailDefination';
 import { UserInfo } from '../components/UserInfo';
+import { UnorderedListOutlined } from '@ant-design/icons';
 
 interface Recipe {
   name: string;
@@ -33,7 +34,10 @@ const FoodDetail = () => {
       <SlideBar />
       <div className="flex w-[30%] flex-col px-4">
         <div className="mt-[175px]">
-          <div className="absolute top-30 text-xl font-bold text-orange-400">
+          <div className="absolute top-30 flex flex-row gap-2 text-xl font-bold text-orange-400">
+            <div>
+              <UnorderedListOutlined />
+            </div>
             Yemek Detayı
           </div>
           <div className="min-h-[100px] rounded-3xl border border-blue-200 bg-[#f8efe6] p-2 shadow-lg sm:min-h-[1200px] md:min-h-[1055px]">
