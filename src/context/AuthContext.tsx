@@ -14,7 +14,7 @@ interface AuthProviderProps {
 }
 
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
-  const [user, setUser] = useState<string | null>(localStorage.getItem('user'));
+  const [user, setUser] = useState<string | null>(null);
   const [token, setToken] = useState<string | null>(localStorage.getItem('token'));
 
   const login = (userData: string, userToken: string) => {
@@ -29,6 +29,8 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     setToken(null);
     localStorage.removeItem('token');
     localStorage.removeItem('user');
+    localStorage.removeItem('accessToken');
+    localStorage.removeItem('refreshToken');
   };
 
   return (
@@ -39,7 +41,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 };
 
 // eslint-disable-next-line react-refresh/only-export-components
-export const useAuth = (): AuthContextType => {
+export const useAuth = () => {
   const context = useContext(AuthContext);
   if (!context) {
     throw new Error('useAuth must be used within an AuthProvider');
